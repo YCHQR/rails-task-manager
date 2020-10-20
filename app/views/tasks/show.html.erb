@@ -1,0 +1,13 @@
+<div class="container">
+  <h1 class="text-center"><%= @task.title %></h1>
+  <br>
+  <p class="text-center shadow-lg p-3 mb-5 bg-white rounded"><%= @task.details %></p>
+
+  <div class="alert alert-success text-center m-2 align-middle">
+    <%= link_to "Edit task", tasks_edit_path(@task) %>
+  </div>
+
+  <div class="alert alert-success text-center m-2 align-middle">
+    <%= link_to "Back to tasks", tasks_path %>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<div class="container">
+  <h1 class="text-center">Tasks</h1>
+  <ul class="row text-center">
+    <% @tasks.each do |task|  %>
+    <div class="col alert alert-primary text-center m-2 align-middle">
+      <label for="completed" class="align-middle"><%= link_to "#{task.title}", task_path(task) %></label>
+      <label for="completed" class=""><%= link_to "Delete task", task_path(task),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %></label>
+    </div>
+    <% end %>
+  </ul>
+
+  <div class="alert alert-success text-center m-2 align-middle">
+    <%= link_to "Create new task", tasks_new_path %>
+  </div>
+</div>
